@@ -3,37 +3,39 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from "@/components/ui/button";
-import { Check, DollarSign } from "lucide-react";
+import { Check, BadgeCheck, DollarSign } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const pricingPlans = [
   {
-    name: "Starter",
-    price: "$199",
+    name: "Standard",
+    price: "$499",
     period: "per month per provider",
-    description: "Perfect for individual physicians or small practices just getting started.",
+    description: "Perfect for individual physicians or small practices looking to streamline documentation.",
     features: [
       "Voice to documentation conversion",
       "Basic EHR integration",
-      "Up to 100 patient notes per month",
-      "Email support",
-      "Standard security features"
+      "Up to 250 patient notes per month",
+      "Email support within 24 hours",
+      "HIPAA-compliant security",
+      "Mobile app access"
     ],
     highlighted: false,
     buttonText: "Get Started"
   },
   {
     name: "Professional",
-    price: "$349",
+    price: "$999",
     period: "per month per provider",
-    description: "Ideal for established practices looking to optimize their documentation workflow.",
+    description: "Ideal for established practices requiring advanced features and dedicated support.",
     features: [
-      "Everything in Starter, plus:",
+      "Everything in Standard, plus:",
       "Advanced AI summarization",
       "Unlimited patient notes",
-      "Priority support",
-      "Custom templates",
-      "Analytics dashboard"
+      "Priority support (response within 4 hours)",
+      "Custom documentation templates",
+      "Advanced analytics dashboard",
+      "Multi-specialty support"
     ],
     highlighted: true,
     buttonText: "Most Popular"
@@ -42,15 +44,16 @@ const pricingPlans = [
     name: "Enterprise",
     price: "Custom",
     period: "Contact for pricing",
-    description: "Tailored solutions for hospitals and large healthcare organizations.",
+    description: "Tailored solutions for hospitals and large healthcare organizations with complex needs.",
     features: [
       "Everything in Professional, plus:",
       "Dedicated account manager",
       "Custom EHR integrations",
-      "Advanced analytics",
-      "Multi-specialty support",
-      "24/7 Premium support",
-      "On-site training"
+      "Advanced decision support features",
+      "White-labeled solution option",
+      "24/7 Premium technical support",
+      "On-site training and implementation",
+      "SLA guarantees"
     ],
     highlighted: false,
     buttonText: "Contact Sales"
@@ -97,7 +100,10 @@ const Pricing = () => {
                     <ul className="space-y-3 my-6">
                       {plan.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start">
-                          <Check className="h-5 w-5 text-bleep-green mr-2 shrink-0 mt-0.5" />
+                          {feature.includes("Everything in") ? 
+                            <BadgeCheck className="h-5 w-5 text-bleep-green mr-2 shrink-0 mt-0.5" /> :
+                            <Check className="h-5 w-5 text-bleep-green mr-2 shrink-0 mt-0.5" />
+                          }
                           <span className="text-bleep-neutral-dark">{feature}</span>
                         </li>
                       ))}
