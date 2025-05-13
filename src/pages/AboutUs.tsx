@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,28 +7,28 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const teamMembers = [
   {
-    name: "Dr. Sarah Chen",
+    name: "Dr. Anirudh Anilkumar",
     title: "CEO, Co-Founder",
     bio: "Former practicing physician with 15 years in internal medicine and a passion for healthcare technology.",
-    imageUrl: "https://source.unsplash.com/random/400x400/?woman,professional"
+    imageUrl: "https://source.unsplash.com/random/400x400/?doctor,indian"
   },
   {
-    name: "Michael Rodriguez",
+    name: "Ishant Dahiya",
     title: "CTO, Co-Founder",
-    bio: "AI researcher with expertise in natural language processing and healthcare applications of machine learning.",
-    imageUrl: "https://source.unsplash.com/random/400x400/?man,technology"
+    bio: "Technical lead with expertise in natural language processing and healthcare applications of machine learning.",
+    imageUrl: "https://source.unsplash.com/random/400x400/?man,indian,technology"
+  },
+  {
+    name: "Ojas Jain",
+    title: "Chief Hardware Officer, Co-Founder",
+    bio: "Hardware expert specializing in medical devices and IoT integration for healthcare solutions.",
+    imageUrl: "https://source.unsplash.com/random/400x400/?man,indian,engineer"
   },
   {
     name: "Dr. James Williams",
     title: "Chief Medical Officer",
     bio: "Practicing cardiologist and medical informatics specialist focusing on clinical workflow optimization.",
     imageUrl: "https://source.unsplash.com/random/400x400/?doctor,male"
-  },
-  {
-    name: "Priya Patel",
-    title: "Head of Product",
-    bio: "Product leader with extensive experience in healthcare SaaS and user-centered design principles.",
-    imageUrl: "https://source.unsplash.com/random/400x400/?woman,indian"
   }
 ];
 
