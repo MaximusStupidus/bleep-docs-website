@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,27 +9,21 @@ import { Card, CardContent } from "@/components/ui/card";
 const teamMembers = [
   {
     name: "Dr. Anirudh Anilkumar",
-    title: "CEO, Co-Founder",
+    title: "Co-Founder",
     bio: "Former practicing physician with 15 years in internal medicine and a passion for healthcare technology.",
     imageUrl: "https://source.unsplash.com/random/400x400/?doctor,indian"
   },
   {
     name: "Ishant Dahiya",
-    title: "CTO, Co-Founder",
+    title: "Co-Founder",
     bio: "Technical lead with expertise in natural language processing and healthcare applications of machine learning.",
     imageUrl: "https://source.unsplash.com/random/400x400/?man,indian,technology"
   },
   {
     name: "Ojas Jain",
-    title: "Chief Hardware Officer, Co-Founder",
+    title: "Co-Founder",
     bio: "Hardware expert specializing in medical devices and IoT integration for healthcare solutions.",
     imageUrl: "https://source.unsplash.com/random/400x400/?man,indian,engineer"
-  },
-  {
-    name: "Dr. James Williams",
-    title: "Chief Medical Officer",
-    bio: "Practicing cardiologist and medical informatics specialist focusing on clinical workflow optimization.",
-    imageUrl: "https://source.unsplash.com/random/400x400/?doctor,male"
   }
 ];
 
@@ -80,7 +75,7 @@ const AboutUs = () => {
               Meet Our Team
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {teamMembers.map((member, index) => (
                 <Card key={index} className="overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1 duration-300">
                   <div className="h-64 overflow-hidden">

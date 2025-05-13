@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const pricingPlans = [
   {
     name: "Standard",
-    price: "₹36,999",
+    price: "₹499",
     period: "per month per provider",
     description: "Perfect for individual physicians or small practices looking to streamline documentation.",
     features: [
@@ -24,7 +25,7 @@ const pricingPlans = [
   },
   {
     name: "Professional",
-    price: "₹74,999",
+    price: "₹999",
     period: "per month per provider",
     description: "Ideal for established practices requiring advanced features and dedicated support.",
     features: [
