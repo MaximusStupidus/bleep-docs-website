@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { Brain, Chip, Waveform } from "lucide-react";
+import { Brain, Cpu, AudioWaveform } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const featuresData = [
   {
     title: "Voice to Documentation",
     description: "Convert patient conversations into structured clinical notes with medical-grade accuracy.",
-    icon: <Waveform className="h-10 w-10 text-bleep-blue" />,
+    icon: <AudioWaveform className="h-10 w-10 text-bleep-blue" />,
   },
   {
     title: "AI Summarization",
@@ -17,7 +17,7 @@ const featuresData = [
   {
     title: "Seamless Integration",
     description: "Works with all major EHR systems for frictionless documentation workflows.",
-    icon: <Chip className="h-10 w-10 text-bleep-blue-dark" />,
+    icon: <Cpu className="h-10 w-10 text-bleep-blue-dark" />,
   }
 ];
 

@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from "@/components/ui/button";
-import { Calendar, ClipboardCheck, FileText, Star, Zap, Rocket } from "lucide-react";
+import { AudioWaveform, ClipboardCheck, FileText, Star, Zap, Rocket } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const featuresData = [
@@ -22,7 +22,7 @@ const featuresData = [
   {
     title: "Seamless Integration",
     description: "Works with all major EHR systems for frictionless documentation workflows.",
-    icon: <Calendar className="h-10 w-10 text-bleep-blue-dark" />,
+    icon: <AudioWaveform className="h-10 w-10 text-bleep-blue-dark" />,
     details: "Connect directly to Epic, Cerner, Athenahealth, and other major EHR platforms with minimal IT setup required."
   },
   {
