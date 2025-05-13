@@ -1,23 +1,23 @@
 
 import React from 'react';
-import { Calendar, ClipboardCheck, FileText } from "lucide-react";
+import { Brain, Chip, Waveform } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const featuresData = [
   {
     title: "Voice to Documentation",
     description: "Convert patient conversations into structured clinical notes with medical-grade accuracy.",
-    icon: <FileText className="h-10 w-10 text-bleep-blue" />,
+    icon: <Waveform className="h-10 w-10 text-bleep-blue" />,
   },
   {
     title: "AI Summarization",
     description: "Get concise summaries of patient encounters with key insights and actionable information.",
-    icon: <ClipboardCheck className="h-10 w-10 text-bleep-green" />,
+    icon: <Brain className="h-10 w-10 text-bleep-green" />,
   },
   {
     title: "Seamless Integration",
     description: "Works with all major EHR systems for frictionless documentation workflows.",
-    icon: <Calendar className="h-10 w-10 text-bleep-blue-dark" />,
+    icon: <Chip className="h-10 w-10 text-bleep-blue-dark" />,
   }
 ];
 
