@@ -3,8 +3,15 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from "@/components/ui/button";
-import { Users, Settings } from "lucide-react";
+import { Users, Settings, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { 
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext
+} from "@/components/ui/carousel";
 
 const teamMembers = [
   {
@@ -27,20 +34,42 @@ const teamMembers = [
   }
 ];
 
+const officeImages = [
+  "https://source.unsplash.com/random/800x500/?modern,office",
+  "https://source.unsplash.com/random/800x500/?tech,workspace",
+  "https://source.unsplash.com/random/800x500/?medical,technology",
+  "https://source.unsplash.com/random/800x500/?innovation,lab"
+];
+
 const AboutUs = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-grow">
         <section className="w-full py-16 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white to-bleep-blue-light/30">
+          {/* Hero section with large image */}
           <div className="max-w-7xl mx-auto">
-            <div className="max-w-3xl mx-auto text-center mb-16">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 animate-fade-in">
-                <span className="gradient-text">About Bleep</span>
-              </h1>
-              <p className="text-lg md:text-xl text-bleep-neutral-dark mb-8 animate-slide-up">
-                We're on a mission to give physicians their time back through intelligent medical documentation.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+              <div className="space-y-6 animate-fade-in">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+                  <span className="gradient-text">About Bleep</span>
+                </h1>
+                <p className="text-lg text-bleep-neutral-dark">
+                  We're on a mission to give physicians their time back through intelligent medical documentation.
+                </p>
+                <div className="flex items-center space-x-2 text-bleep-blue">
+                  <span>Our story</span>
+                  <ChevronRight className="h-4 w-4" />
+                </div>
+              </div>
+
+              <div className="rounded-2xl overflow-hidden shadow-xl animate-slide-up">
+                <img 
+                  src="https://source.unsplash.com/random/1200x800/?medical,technology,innovation" 
+                  alt="Bleep team at work" 
+                  className="w-full h-80 object-cover"
+                />
+              </div>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
@@ -57,7 +86,27 @@ const AboutUs = () => {
                 </p>
               </div>
               
-              <div>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src="https://source.unsplash.com/random/800x600/?doctor,patient,conversation" 
+                  alt="Doctor with patient" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
+              <div className="order-2 md:order-1">
+                <div className="rounded-xl overflow-hidden shadow-lg">
+                  <img 
+                    src="https://source.unsplash.com/random/800x600/?artificial,intelligence,healthcare" 
+                    alt="AI in Healthcare" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div className="order-1 md:order-2">
                 <div className="flex items-center mb-6">
                   <Users className="h-8 w-8 text-bleep-green mr-3" />
                   <h2 className="text-2xl font-bold">Our Approach</h2>
@@ -92,6 +141,32 @@ const AboutUs = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+
+            <div className="mt-20 mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 gradient-text">
+                Our Offices
+              </h2>
+
+              <Carousel className="w-full">
+                <CarouselContent>
+                  {officeImages.map((image, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <div className="p-1">
+                        <div className="rounded-xl overflow-hidden shadow-lg aspect-video">
+                          <img 
+                            src={image} 
+                            alt={`Bleep office ${index + 1}`} 
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
             
             <div className="mt-20 text-center">
