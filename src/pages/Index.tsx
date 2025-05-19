@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Brain, AudioWaveform, Cpu, ChevronDown } from "lucide-react";
@@ -138,40 +137,14 @@ const Index = () => {
             Documentation
           </h2>
           
-          <div className="bg-white/5 rounded-xl border border-white/10 p-6 md:p-8">
-            <Tabs defaultValue="quickstart">
-              <TabsList className="grid w-full max-w-md grid-cols-3 mb-8 bg-[#141821]">
-                <TabsTrigger value="quickstart">Quick Start</TabsTrigger>
-                <TabsTrigger value="api">API Reference</TabsTrigger>
-                <TabsTrigger value="guides">Guides</TabsTrigger>
-              </TabsList>
-              
-              <div className="p-4 bg-[#1A1F2C] rounded-lg border border-white/10">
-                <pre className="text-sm text-white/70 overflow-x-auto">
-                  <code>{`// Example API usage
-import { Bleep } from '@bleep/sdk';
-
-const bleep = new Bleep({
-  apiKey: process.env.BLEEP_API_KEY,
-});
-
-// Record patient conversation
-const session = await bleep.startSession({
-  doctorId: 'dr-smith-123',
-  patientId: 'patient-456',
-});
-
-// Generate clinical documentation
-const notes = await session.generateNotes();`}</code>
-                </pre>
-              </div>
-              
-              <div className="mt-6 flex justify-end">
-                <Button variant="outline" className="border-white/20 bg-white/5 hover:bg-white/10 text-white">
-                  View Full Documentation
-                </Button>
-              </div>
-            </Tabs>
+          <div className="bg-white/5 rounded-xl border border-white/10 p-6 md:p-8 text-center">
+            <div className="py-20">
+              <h3 className="text-3xl font-bold text-white mb-4">Coming Soon</h3>
+              <p className="text-white/70 max-w-2xl mx-auto">
+                Our comprehensive documentation is currently under development.
+                Check back soon for detailed guides, API references, and integration tutorials.
+              </p>
+            </div>
           </div>
         </div>
       </section>
