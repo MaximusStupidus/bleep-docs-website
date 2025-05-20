@@ -83,9 +83,12 @@ const Header = () => {
                 </button>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link to="/about" className="text-white/80 hover:text-white transition-colors px-3 py-2">
+                <button 
+                  onClick={() => scrollToSection('about')} 
+                  className="text-white/80 hover:text-white transition-colors px-3 py-2"
+                >
                   About Us
-                </Link>
+                </button>
               </NavigationMenuItem>
               <NavigationMenuItem>
                 <button 
@@ -138,9 +141,12 @@ const Header = () => {
             >
               Why Bleep
             </button>
-            <Link to="/about" className="py-3 px-4 text-white/80 hover:text-white" onClick={toggleMobileMenu}>
+            <button 
+              onClick={() => scrollToSection('about')} 
+              className="text-left py-3 px-4 text-white/80 hover:text-white"
+            >
               About Us
-            </Link>
+            </button>
             <button 
               onClick={() => scrollToSection('cta')} 
               className="text-left py-3 px-4 text-white/80 hover:text-white"
